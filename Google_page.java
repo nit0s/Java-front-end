@@ -1,4 +1,4 @@
-package page_object;
+package page_object_git;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;

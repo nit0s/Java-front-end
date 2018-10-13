@@ -1,4 +1,4 @@
-package page_object;
+package page_object_git;
 
 import static org.junit.Assert.assertTrue;
 
