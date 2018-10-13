@@ -1,5 +1,6 @@
 package page_object_git;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,9 +16,10 @@ public class Google_page {
 	}//construct
 	
 	//objects
-	String searchBarTextField = "#lst-ib";//css
-	String searchButton = "btnK";//name
-	String resultsLabelText = "#resultStats";//css
+	By searchBarTextField = By.cssSelector("#lst-ib");
+	By searchButton = By.name("btnK");
+	By resultsLabelText = By.cssSelector("#resultStats");
+	
 	
 	//methods
 	public void openBrowser(){
@@ -25,12 +27,12 @@ public class Google_page {
 	}
 	
 	public void searchSomething(){
-		util.sendTextToElement(driver, wait, searchBarTextField, 3, "hello");
-		clickSearchBar(driver,1,wait);
+		util.sendTextToElement(driver, wait, searchBarTextField, "hello");
+		clickSearchBar(driver,wait);
 	}
 	
-	public void clickSearchBar(WebDriver driver, int type, WebDriverWait wait){
-		util.clickElement(driver, searchButton, type, wait);
+	public void clickSearchBar(WebDriver driver, WebDriverWait wait){
+		util.clickElement(driver, searchButton, wait);
 	}
 	
 	public boolean searchReturnResults(){
