@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Actions {
 
 	public WebDriver configureChrome(WebDriver driver){
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\nt\\Downloads\\Selenium\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\carlos.becerra\\Desktop\\setUp\\ncd\\chromedriver.exe");
 		driver = new ChromeDriver();
 		return driver;}
 	
